@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
             <div className="bg-white rounded-lg shadow-md p-8">
               <h3 className="text-2xl font-serif font-semibold text-gray-800 mb-6">Book an Appointment</h3>
               
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} data-netlify="true" name="contact" method="POST">
                 <div className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">

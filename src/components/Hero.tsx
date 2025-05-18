@@ -26,8 +26,8 @@ const Hero = () => {
           <Image 
             src="/images/TanuWatermark.png"
             alt="Tanu's Salon Dè Beautè"
-            width={160}
-            height={160}
+            width={360}
+            height={360}
             className="mb-8 mx-auto"
           />
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10">
