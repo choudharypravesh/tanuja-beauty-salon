@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/pachoudhary/Downloads/Beauty Salon/src/app/layout\":[\"static/media/42f131834de1b4dc-s.p.woff2\",\"static/media/fc6b86356f45d8cd-s.p.woff2\",\"static/media/4f05ba3a6752a328-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
