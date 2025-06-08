@@ -11,7 +11,7 @@ import { useScrollAnimation } from './utils/animations';
 function App() {
   // Set page title
   useEffect(() => {
-    document.title = "Tanu's Salon Dè Beautè | Beauty Salon in Bhopal";
+    document.title = "Tanu's Salon Dé Beauté | Beauty Salon in Bhopal";
   }, []);
 
   // Initialize scroll animations

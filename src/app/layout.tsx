@@ -23,21 +23,21 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "Tanu's Salon Dè Beautè | Top Beauty Parlour in Bhopal | Hoshangabad Road, Misrod, Katara Hills",
-  description: "Tanu's Salon Dè Beautè: Bhopal's leading beauty parlour for bridal makeup, hair styling, skincare, and more. Serving Hoshangabad Road, Misrod, Katara Hills, Bag Mugaliya, Bag Sevaniya. Book your appointment!",
-  keywords: "Beauty parlour Bhopal, beauty salon Bhopal, best salon Hoshangabad Road, makeup artist Misrod, bridal makeup Katara Hills, hair salon Bag Mugaliya, skincare Bag Sevaniya, beauty services Gulabi Nagar, Tanu's Salon Dè Beautè, ladies beauty parlour Bhopal, facial, waxing, haircut, manicure, pedicure",
+  title: "Tanu's Salon Dé Beauté | Top Beauty Parlour in Bhopal | Hoshangabad Road, Misrod, Katara Hills",
+  description: "Tanu's Salon Dé Beauté: Bhopal's leading beauty parlour for bridal makeup, hair styling, skincare, and more. Serving Hoshangabad Road, Misrod, Katara Hills, Bag Mugaliya, Bag Sevaniya. Book your appointment!",
+  keywords: "Beauty parlour Bhopal, beauty salon Bhopal, best salon Hoshangabad Road, makeup artist Misrod, bridal makeup Katara Hills, hair salon Bag Mugaliya, skincare Bag Sevaniya, beauty services Gulabi Nagar, Tanu's Salon Dé Beauté, ladies beauty parlour Bhopal, facial, waxing, haircut, manicure, pedicure",
   openGraph: {
-    title: "Tanu's Salon Dè Beautè | Top Beauty Parlour in Bhopal",
+    title: "Tanu's Salon Dé Beauté | Top Beauty Parlour in Bhopal",
     description: "Expert bridal makeup, hair, skin treatments in Bhopal. Serving Hoshangabad Rd, Misrod, Katara.",
     url: 'https://www.tanussalondebeaute.com',
-    siteName: "Tanu's Salon Dè Beautè",
-    images: [ { url: '/logo.png', width: 800, height: 600, alt: "Tanu's Salon Dè Beautè Logo" } ],
+    siteName: "Tanu's Salon Dé Beauté",
+    images: [ { url: '/logo.png', width: 800, height: 600, alt: "Tanu's Salon Dé Beauté Logo" } ],
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Tanu's Salon Dè Beautè | Top Beauty Parlour in Bhopal",
+    title: "Tanu's Salon Dé Beauté | Top Beauty Parlour in Bhopal",
     description: "Bhopal's choice for bridal makeup, hair & skin. We serve Hoshangabad Rd, Misrod, Katara.",
     images: ['/logo.png'],
   },
@@ -51,7 +51,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    "name": "Tanu's Salon Dè Beautè",
+    "name": "Tanu's Salon Dé Beauté",
     "description": "Bhopal's leading beauty parlour for bridal makeup, hair styling, skincare, and more. Serving Hoshangabad Road, Misrod, Katara Hills, Bag Mugaliya, Bag Sevaniya.",
     "address": {
       "@type": "PostalAddress",

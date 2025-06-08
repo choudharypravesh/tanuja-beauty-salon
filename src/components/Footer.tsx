@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center mb-4">
               <Image 
                 src="/images/TanuWatermark.png"
-                alt="Tanu's Salon Dè Beautè Logo"
+                alt="Tanu's Salon Dé Beauté Logo"
                 width={120}
                 height={120}
                 className="mr-2"
@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-          <p>&copy; {currentYear} Tanu's Salon Dè Beautè. All rights reserved.</p>
+          <p>&copy; {currentYear} Tanu's Salon Dé Beauté. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -4,7 +4,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 1,
     imageUrl: "/images/indian_women_going_through_bridal_makeup.jpeg",
-    alt: "Elegant bridal makeup for wedding at Tanu's Salon Dè Beautè, Bhopal"
+    alt: "Elegant bridal makeup for wedding at Tanu's Salon Dé Beauté, Bhopal"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 4,
     imageUrl: "/images/indian_women_getting_facial_treatment_in_beauty.jpeg",
-    alt: "Client receiving a rejuvenating facial treatment at Tanu's Salon Dè Beautè, Bhopal"
+    alt: "Client receiving a rejuvenating facial treatment at Tanu's Salon Dé Beauté, Bhopal"
   },
   {
     id: 5,
@@ -34,7 +34,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 7,
     imageUrl: "/images/closeup_images_of_indian_women_in_beauty.jpeg",
-    alt: "Client enjoying a premium beauty service at Tanu's Salon Dè Beautè, Bhopal"
+    alt: "Client enjoying a premium beauty service at Tanu's Salon Dé Beauté, Bhopal"
   },
   {
     id: 8,
