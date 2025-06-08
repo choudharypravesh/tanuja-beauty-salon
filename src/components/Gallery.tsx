@@ -66,7 +66,7 @@ const Gallery: React.FC = () => {
           >
             <img 
               src={selectedImage} 
-              alt="Enlarged gallery image" 
+              alt={galleryImages.find(img => img.imageUrl === selectedImage)?.alt || 'Enlarged gallery image at Tanu\'s Salon Dè Beautè'}
               className="max-w-full max-h-[90vh] object-contain"
             />
           </div>

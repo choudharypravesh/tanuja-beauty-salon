@@ -22,7 +22,7 @@ const Services: React.FC = () => {
               <div className="h-56 overflow-hidden">
                 <img 
                   src={service.imageUrl} 
-                  alt={service.name}
+                  alt={`Client receiving ${service.name} treatment at Tanu's Salon Dè Beautè, Bhopal`}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>

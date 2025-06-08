@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['images.pexels.com', 'raw.githubusercontent.com'],
-    unoptimized: true
+    unoptimized: false
   },
   typescript: {
     ignoreBuildErrors: true
