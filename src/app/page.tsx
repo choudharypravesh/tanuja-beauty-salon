@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
@@ -11,10 +10,6 @@ import Footer from '@/components/Footer';
 import { useScrollAnimation } from '@/utils/animations';
 
 export default function Home() {
-  useEffect(() => {
-    document.title = "Tanu's Salon Dè Beautè | Beauty Salon in Bhopal";
-  }, []);
-
   useScrollAnimation();
 
   return (

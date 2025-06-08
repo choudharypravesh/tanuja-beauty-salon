@@ -54,7 +54,7 @@ const Navbar = () => {
               className="mr-3"
             />
             <span className="text-2xl font-cinzel font-semibold text-gray-800 tracking-wide">
-              Tanu's Salon Dè Beautè
+              Tanu's Salon Dé Beauté
             </span>
           </div>
 

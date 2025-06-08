@@ -10,7 +10,7 @@ const Testimonials: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">Client Testimonials</h2>
           <div className="w-24 h-1 bg-rose-500 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover what our clients have to say about their experiences at Tanu's Salon Dè Beautè.
+            Discover what our clients have to say about their experiences at Tanu's Salon Dé Beauté.
           </p>
         </div>
 

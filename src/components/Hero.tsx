@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <Image
           src="https://images.pexels.com/photos/3997373/pexels-photo-3997373.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="Background"
+          alt="Elegant beauty salon interior in Bhopal - Tanu's Salon Dé Beauté"
           fill
           className="object-cover opacity-15"
           priority
@@ -25,13 +25,14 @@ const Hero = () => {
         <div className="animate-fadeIn">
           <Image 
             src="/images/TanuWatermark.png"
-            alt="Tanu's Salon Dè Beautè"
+            alt="Tanu's Salon Dé Beauté"
             width={360}
             height={360}
             className="mb-8 mx-auto"
           />
-          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10">
-            Elevating beauty through expert care, personalized service, and premium treatments in the heart of Bhopal.
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-rose-700 mb-6">Tanu's Salon Dé Beauté: Premier Beauty Parlour in Bhopal</h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+            Elevating beauty through expert care, personalized service, and premium treatments in the heart of Bhopal. Your destination for bridal makeup, hair styling, and skincare in areas like Hoshangabad Road, Misrod, and Katara Hills.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
