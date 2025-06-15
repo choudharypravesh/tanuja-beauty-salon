@@ -44,7 +44,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/logo.png',
-    apple: '/logo.png',
   },
   alternates: {
     canonical: '/',
@@ -91,11 +90,22 @@ export default function RootLayout({
       }
     ],
     "hasOffer": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bridal Makeup" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Haircut & Styling" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facial Treatments" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Makeup Services" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Threading & Waxing" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bridal Makeups" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Party and Occasion Makeups" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Everyday and Natural Makeups" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Classic Cleansing Facials" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hydrating and Moisturising Facials" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Anti-Aging and Firming Facials" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brightening and De-Tan Facials" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Acne and Blemish Control Facials" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sensitive Skin Treatments" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Luxury Spa Facials" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Threading and Shaping" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Waxing Services" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bleaching and De-Tan Treatments" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hair Styling and Treatments" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Henna and Mehndi Art" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Grooming Packages" } }
     ],
     "sameAs": [
       "https://www.facebook.com/tanusalon",
