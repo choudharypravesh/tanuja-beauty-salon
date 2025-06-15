@@ -1,3 +1,5 @@
+"use client"; // This directive must be the very first line
+
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
