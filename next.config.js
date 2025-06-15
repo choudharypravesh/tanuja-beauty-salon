@@ -12,6 +12,21 @@ const nextConfig = {
     ignoreDuringBuilds: true
   },
   output: 'export',
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.tanussalondebeaute.com',
+          },
+        ],
+        destination: 'https://tanussalondebeaute.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
