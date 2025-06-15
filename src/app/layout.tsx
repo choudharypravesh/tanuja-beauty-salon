@@ -44,6 +44,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/logo.png',
+    apple: '/logo.png', // This line is restored
   },
   alternates: {
     canonical: '/',
