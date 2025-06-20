@@ -45,5 +45,35 @@ export const galleryImages: GalleryImage[] = [
     id: 9,
     imageUrl: "/images/closeup_images_of_indian_women_in_beauty (2).jpeg",
     alt: "Range of professional salon services available at Tanu's, Bhopal"
+  },
+  {
+    id: 10,
+    imageUrl: "/images/closeup_images_of_indian_women_in_makeup-7.jpg",
+    alt: "Closeup of Indian woman with elegant makeup at Tanu's Salon Dé Beauté, Bhopal"
+  },
+  {
+    id: 11,
+    imageUrl: "/images/closeup_images_of_indian_women_in_makeup-2.jpg",
+    alt: "Detailed view of professional makeup artistry at Tanu's Salon, Bhopal"
+  },
+  {
+    id: 12,
+    imageUrl: "/images/closeup_images_of_indian_women_in_makeup-3.jpg",
+    alt: "Indian woman showcasing flawless bridal makeup at Tanu's Salon Dé Beauté"
+  },
+  {
+    id: 13,
+    imageUrl: "/images/closeup_images_of_indian_women_in_makeup-4.jpg",
+    alt: "Expertly applied eye makeup at Tanu's Salon Dé Beauté, Bhopal"
+  },
+  {
+    id: 14,
+    imageUrl: "/images/closeup_images_of_indian_women_in_makeup-5.jpg",
+    alt: "Radiant look after makeup session at Tanu's Salon, Bhopal"
+  },
+  {
+    id: 15,
+    imageUrl: "/images/closeup_images_of_indian_women_in_makeup-6.jpg",
+    alt: "Glamorous party makeup for Indian woman at Tanu's Salon Dé Beauté"
   }
 ];

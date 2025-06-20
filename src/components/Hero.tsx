@@ -30,7 +30,7 @@ const Hero = () => {
             height={360}
             className="mb-8 mx-auto"
           />
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-rose-700 mb-6">Tanu's Salon Dé Beauté: Premier Beauty Parlour in Bhopal</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-rose-700 mb-6">Tanu's Salon Dé Beauté: Bridal Makeup, Hair & Skin Experts in Bhopal</h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
             Elevating beauty through expert care, personalized service, and premium treatments in the heart of Bhopal. Your destination for bridal makeup, hair styling, and skincare in areas like Hoshangabad Road, Misrod, and Katara Hills.
           </p>

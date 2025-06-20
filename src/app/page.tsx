@@ -6,6 +6,7 @@ import Services from '@/components/Services';
 import Gallery from '@/components/Gallery';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
+import AboutSalon from '@/components/AboutSalon'; // Import the new component
 import Footer from '@/components/Footer';
 import { useScrollAnimation } from '@/utils/animations';
 
@@ -20,6 +21,10 @@ export default function Home() {
           <Hero />
         </section>
         
+        <div className="animate-on-scroll"> {/* Optional: wrap in animation div if desired */}
+          <AboutSalon />
+        </div>
+
         <div className="animate-on-scroll">
           <Services />
         </div>

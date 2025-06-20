@@ -1,6 +1,9 @@
+"use client"; // This directive must be the very first line
+
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +25,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', id: 'home' },
-    { name: 'Services', id: 'services' },
-    { name: 'Gallery', id: 'gallery' },
-    { name: 'Testimonials', id: 'testimonials' },
-    { name: 'Contact', id: 'contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Gallery', href: '/#gallery' },
+    { name: 'Testimonials', href: '/#testimonials' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   const scrollToSection = (id: string) => {
@@ -61,15 +65,21 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className={`font-medium transition duration-300 ${
-                  isScrolled ? 'text-gray-700 hover:text-rose-600' : 'text-gray-700 hover:text-rose-500'
-                }`}
-              >
-                {link.name}
-              </button>
+              <Link key={link.href} href={link.href} passHref legacyBehavior={false}>
+                <span
+                  className={`font-medium transition duration-300 cursor-pointer ${
+                    isScrolled ? 'text-gray-700 hover:text-rose-600' : 'text-gray-700 hover:text-rose-500'
+                  }`}
+                  onClick={() => {
+                    if (link.href.startsWith('/#')) {
+                      scrollToSection(link.href.substring(2));
+                    }
+                    // No need to call setIsOpen(false) for desktop links
+                  }}
+                >
+                  {link.name}
+                </span>
+              </Link>
             ))}
           </div>
 
@@ -90,13 +100,19 @@ const Navbar = () => {
           <div className="md:hidden bg-white absolute top-full left-0 w-full shadow-md py-4 px-4 transition-all duration-300">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-gray-700 hover:text-rose-600 font-medium transition duration-300"
-                >
-                  {link.name}
-                </button>
+                <Link key={link.href} href={link.href} passHref legacyBehavior={false}>
+                  <span
+                    className="text-gray-700 hover:text-rose-600 font-medium transition duration-300 py-2 block text-center cursor-pointer"
+                     onClick={() => {
+                      if (link.href.startsWith('/#')) {
+                        scrollToSection(link.href.substring(2));
+                      }
+                      setIsOpen(false); // Close mobile menu
+                    }}
+                  >
+                    {link.name}
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
