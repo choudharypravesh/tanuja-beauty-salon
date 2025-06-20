@@ -9,7 +9,7 @@ const Services: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">Our Services</h2>
           <div className="w-24 h-1 bg-rose-500 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Experience our comprehensive range of premium beauty services designed to enhance your natural beauty and provide a relaxing, luxurious experience.
+            Experience our comprehensive range of premium <strong>beauty services</strong>, including popular options like '<strong>facial near me</strong>' and '<strong>threading near me</strong>', designed to enhance your natural beauty and provide a relaxing, luxurious experience at our Bhopal salon.
           </p>
         </div>
 
@@ -27,7 +27,7 @@ const Services: React.FC = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-serif font-semibold text-gray-800 mb-3">{service.name}</h3>
+                <h3 className="text-xl font-serif font-semibold text-gray-800 mb-3"><strong>{service.name}</strong></h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <button className="text-rose-600 font-medium inline-flex items-center transition hover:text-rose-700">
                   Learn more

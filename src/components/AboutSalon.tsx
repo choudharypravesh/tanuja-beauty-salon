@@ -11,7 +11,7 @@ const AboutSalon: React.FC = () => {
           </h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            Step into Tanu’s Salon Dé Beauté, a haven where beauty is not just enhanced but celebrated. With over 15 years of expertise, Tanu offers a bespoke experience, renowned for artistry, warmth, and meticulous attention to detail. Our salon is a beacon of quality, trust, and transformation, recognized as a top beauty parlour in Bhopal for premier services including bridal makeup and expert skin treatments.
+            Step into Tanu’s Salon Dé Beauté, a haven where beauty is not just enhanced but celebrated. With over 15 years of expertise, Tanu offers a bespoke experience, renowned for artistry, warmth, and meticulous attention to detail. Our <strong>salon in Bag Mugaliya</strong> stands as a beacon of quality, trust, and transformation, recognized as a top <strong>beauty parlour in Bhopal</strong> for premier services including <strong>bridal makeup</strong> and expert <strong>skin treatments</strong>. Many consider us the go-to '<strong>parlour in Bag Mugaliya</strong>'.
           </p>
           <p className="text-lg text-gray-700 mb-10">
             From the moment you enter, an inviting ambiance soothes and uplifts, blending modern elegance with calming touches for your privacy and comfort. Let the hustle of daily life melt away in an atmosphere of relaxation and rejuvenation.
