@@ -1,6 +1,8 @@
 "use client";
+
 import React, { useState } from 'react';
 import { MapPin, Clock, Phone, Mail, Send, Sparkles, Instagram, Facebook } from 'lucide-react';
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,18 +11,21 @@ const Contact: React.FC = () => {
     service: '',
     message: '',
   });
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     alert('Thank you for your inquiry! We will contact you soon.');
     setFormData({ name: '', email: '', phone: '', service: '', message: '' });
   };
+
   const businessHours = [
     { day: 'Monday', hours: '11 am – 7 pm' },
     { day: 'Tuesday', hours: '11 am – 7 pm' },
@@ -30,6 +35,7 @@ const Contact: React.FC = () => {
     { day: 'Saturday', hours: '11 am – 7 pm' },
     { day: 'Sunday', hours: '11 am – 7 pm' },
   ];
+
   const infoCards = [
     {
       icon: MapPin,
@@ -54,6 +60,7 @@ const Contact: React.FC = () => {
       gradient: 'from-gold-500 to-amber-500',
     },
   ];
+
   return (
     <section
       id="contact"
@@ -63,6 +70,7 @@ const Contact: React.FC = () => {
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-rose-200/30 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-plum-200/30 rounded-full blur-3xl" />
       </div>
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block text-xs md:text-sm font-semibold tracking-[0.3em] uppercase text-rose-600 mb-3">
@@ -76,6 +84,7 @@ const Contact: React.FC = () => {
             We can&apos;t wait to meet you.
           </p>
         </div>
+
         {/* Info cards row */}
         <div className="grid sm:grid-cols-3 gap-5 mb-10">
           {infoCards.map((c, i) => (
@@ -96,6 +105,7 @@ const Contact: React.FC = () => {
             </div>
           ))}
         </div>
+
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Hours + map */}
           <div className="lg:col-span-2 space-y-6">
@@ -136,6 +146,7 @@ const Contact: React.FC = () => {
                 </a>
               </div>
             </div>
+
             <div className="rounded-3xl overflow-hidden shadow-soft border border-rose-100/80 h-64">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.905071907394!2d77.42!3d23.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDA2JzM2LjAiTiA3N8KwMjUnMTIuMCJF!5e0!3m2!1sen!2sin!4v1626876600000!5m2!1sen!2sin"
@@ -148,10 +159,12 @@ const Contact: React.FC = () => {
               />
             </div>
           </div>
+
           {/* Form */}
           <div className="lg:col-span-3">
             <div className="relative p-7 md:p-9 rounded-3xl bg-white border border-rose-100/80 shadow-card overflow-hidden">
               <div className="absolute -top-24 -right-24 w-56 h-56 bg-gradient-radiant opacity-10 rounded-full blur-3xl" />
+
               <div className="relative">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-rose-500 to-plum-500 text-white flex items-center justify-center shadow-glow">
@@ -159,6 +172,7 @@ const Contact: React.FC = () => {
                   </div>
                   <h3 className="font-serif font-bold text-2xl text-gray-900">Book an Appointment</h3>
                 </div>
+
                 <form
                   onSubmit={handleSubmit}
                   data-netlify="true"
@@ -171,6 +185,8 @@ const Contact: React.FC = () => {
                       Full Name
                     </label>
                     <input
+                      type="text"
+                      id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
@@ -179,12 +195,15 @@ const Contact: React.FC = () => {
                       required
                     />
                   </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="email" className="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wider">
                         Email
                       </label>
                       <input
+                        type="email"
+                        id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -193,11 +212,14 @@ const Contact: React.FC = () => {
                         required
                       />
                     </div>
+
                     <div>
                       <label htmlFor="phone" className="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wider">
                         Phone
                       </label>
                       <input
+                        type="tel"
+                        id="phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
@@ -207,11 +229,13 @@ const Contact: React.FC = () => {
                       />
                     </div>
                   </div>
+
                   <div>
                     <label htmlFor="service" className="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wider">
                       Service Interested In
                     </label>
                     <select
+                      id="service"
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
@@ -227,11 +251,14 @@ const Contact: React.FC = () => {
                       <option value="training">Beauty Training</option>
                     </select>
                   </div>
+
                   <div>
                     <label htmlFor="message" className="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wider">
                       Message (Optional)
                     </label>
                     <textarea
+                      id="message"
+                      name="message"
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
@@ -239,6 +266,7 @@ const Contact: React.FC = () => {
                       placeholder="Tell us a little about what you're hoping for..."
                     />
                   </div>
+
                   <button type="submit" className="btn-primary w-full mt-2">
                     <Send size={18} />
                     <span>Send Request</span>

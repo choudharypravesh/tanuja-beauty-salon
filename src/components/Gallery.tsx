@@ -1,24 +1,30 @@
 "use client";
+
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { galleryImages } from '../data/gallery';
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+
 const Gallery: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
   const openLightbox = (index: number) => {
     setSelectedIndex(index);
     document.body.style.overflow = 'hidden';
   };
+
   const closeLightbox = () => {
     setSelectedIndex(null);
     document.body.style.overflow = 'auto';
   };
+
   const next = () =>
     setSelectedIndex((i) => (i === null ? i : (i + 1) % galleryImages.length));
   const prev = () =>
     setSelectedIndex((i) =>
       i === null ? i : (i - 1 + galleryImages.length) % galleryImages.length,
     );
+
   useEffect(() => {
     if (selectedIndex === null) return;
     const handler = (e: KeyboardEvent) => {
@@ -29,8 +35,10 @@ const Gallery: React.FC = () => {
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, [selectedIndex]);
+
   // Varied aspect ratios create a lively masonry-ish feel while staying in a CSS grid
   const rowSpans = ['row-span-2', 'row-span-1', 'row-span-2', 'row-span-1', 'row-span-1', 'row-span-2'];
+
   return (
     <section
       id="gallery"
@@ -40,6 +48,7 @@ const Gallery: React.FC = () => {
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-plum-100/40 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-rose-100/40 rounded-full blur-3xl" />
       </div>
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block text-xs md:text-sm font-semibold tracking-[0.3em] uppercase text-rose-600 mb-3">
@@ -53,6 +62,7 @@ const Gallery: React.FC = () => {
             we craft for every client.
           </p>
         </div>
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-3 md:gap-4">
           {galleryImages.map((image, i) => (
             <div
@@ -77,8 +87,9 @@ const Gallery: React.FC = () => {
           ))}
         </div>
       </div>
+
       {/* Lightbox */}
-      {selectedIndex !== null &&
+      {selectedIndex !== null && (
         <div
           className="fixed inset-0 bg-black/90 backdrop-blur-sm z-[60] flex items-center justify-center p-4 animate-fade-in"
           onClick={closeLightbox}
@@ -93,6 +104,7 @@ const Gallery: React.FC = () => {
           >
             <X size={24} />
           </button>
+
           <button
             className="absolute left-3 md:left-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center text-white transition-colors"
             onClick={(e) => {
@@ -103,6 +115,7 @@ const Gallery: React.FC = () => {
           >
             <ChevronLeft size={26} />
           </button>
+
           <button
             className="absolute right-3 md:right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center text-white transition-colors"
             onClick={(e) => {
@@ -113,6 +126,7 @@ const Gallery: React.FC = () => {
           >
             <ChevronRight size={26} />
           </button>
+
           <div className="relative max-w-5xl w-full max-h-[85vh]" onClick={(e) => e.stopPropagation()}>
             <div className="relative w-full h-[85vh]">
               <Image
@@ -127,7 +141,7 @@ const Gallery: React.FC = () => {
             </div>
           </div>
         </div>
-      }
+      )}
     </section>
   );
 };

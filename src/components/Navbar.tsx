@@ -1,24 +1,13 @@
 "use client";
+
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
-type NavLink = {
-  name: string;
-  href: string;
-};
-
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,13 +17,24 @@ const Navbar = () => {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const navLinks: NavLink[] = [
+
+  const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/#services' },
     { name: 'Gallery', href: '/#gallery' },
     { name: 'Testimonials', href: '/#testimonials' },
+    { name: 'Contact', href: '/#contact' },
   ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ${
@@ -65,6 +65,7 @@ const Navbar = () => {
               </span>
             </div>
           </Link>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
@@ -94,6 +95,7 @@ const Navbar = () => {
               <span>Book Now</span>
             </a>
           </div>
+
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -107,6 +109,7 @@ const Navbar = () => {
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
+
         {/* Mobile Menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-500 ${
@@ -149,4 +152,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;
