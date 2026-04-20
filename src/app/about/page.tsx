@@ -13,14 +13,32 @@ const AboutPage: React.FC = () => {
   return (
     <div className="antialiased text-gray-800">
       <Navbar />
-      <main className="pt-20"> {/* Add padding if Navbar is fixed */}
+      <main>
+        {/* Header banner */}
+        <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden bg-gradient-blush">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -top-16 -left-16 w-96 h-96 bg-rose-300/40 rounded-full blur-3xl animate-float-slow" />
+            <div className="absolute -bottom-16 -right-16 w-96 h-96 bg-plum-300/40 rounded-full blur-3xl animate-float" />
+          </div>
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <span className="inline-block text-xs md:text-sm font-semibold tracking-[0.3em] uppercase text-rose-600 mb-3">
+              Our Story
+            </span>
+            <h1 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 max-w-4xl mx-auto leading-tight">
+              A Sanctuary of <span className="text-gradient-rose">Beauty</span>, Expertise &amp; Personal Touch
+            </h1>
+            <div className="divider-ornate mt-6">✦</div>
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-12">
+              <path fill="#ffffff" d="M0,36 C240,72 480,0 720,24 C960,48 1200,60 1440,36 L1440,60 L0,60 Z" />
+            </svg>
+          </div>
+        </section>
         <section id="about-salon-detailed" className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              {/* Paste the full content from existing AboutSalon.tsx here */}
-              {/* Starting with: <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-10 text-center">...</h2> */}
-              {/* And ending with the last <p>...</p> before closing divs of AboutSalon.tsx */}
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-10 text-center">
+              <h2 className="sr-only">
                 Tanu’s Salon Dé Beauté: A Sanctuary of Beauty, Expertise, and Personal Touch
               </h2>
 

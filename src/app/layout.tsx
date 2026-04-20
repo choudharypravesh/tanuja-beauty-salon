@@ -116,7 +116,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${montserrat.variable} ${cormorantGaramond.variable} ${cinzel.variable}`}>
-      <body className="antialiased text-gray-800">
+      <body className="antialiased text-gray-800 font-sans bg-[#fffaf7] selection:bg-rose-200 selection:text-rose-900">
         {children}
         <script
           type="application/ld+json"
