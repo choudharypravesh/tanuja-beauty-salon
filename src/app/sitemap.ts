@@ -1,24 +1,20 @@
 import { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  // Assuming the website's base URL will be this.
-  // This should be updated if the actual domain is different.
-  const baseUrl = 'https://www.tanussalondebeaute.com';
+const BASE_URL = 'https://tanusalon.netlify.app';
 
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: baseUrl,
-      lastModified: new Date().toISOString(),
+      url: BASE_URL,
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
     },
-    // Add other pages here if the site structure expands
-    // Example:
-    // {
-    //   url: `${baseUrl}/about`,
-    //   lastModified: new Date().toISOString(),
-    //   changeFrequency: 'monthly',
-    //   priority: 0.8,
-    // },
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 }
