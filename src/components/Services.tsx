@@ -1,8 +1,10 @@
 "use client";
+
 import React from 'react';
 import Image from 'next/image';
 import { ArrowUpRight, GraduationCap, Award, Briefcase } from 'lucide-react';
 import { services } from '../data/services';
+
 const trainingPrograms = [
   {
     icon: GraduationCap,
@@ -23,6 +25,7 @@ const trainingPrograms = [
     gradient: 'from-gold-500 to-amber-500',
   },
 ];
+
 const Services: React.FC = () => {
   return (
     <section id="services" className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-white via-rose-50/30 to-white">
@@ -30,6 +33,7 @@ const Services: React.FC = () => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-rose-100/50 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-plum-100/50 rounded-full blur-3xl" />
       </div>
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block text-xs md:text-sm font-semibold tracking-[0.3em] uppercase text-rose-600 mb-3">
@@ -43,6 +47,7 @@ const Services: React.FC = () => {
             and leave you feeling confident, radiant, and renewed.
           </p>
         </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, idx) => (
             <div
@@ -59,13 +64,16 @@ const Services: React.FC = () => {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-rose-950/70 via-rose-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
+
                 <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full text-xs font-semibold text-rose-800 bg-white/90 backdrop-blur-sm shadow-sm">
                   0{service.id}
                 </div>
+
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <h3 className="font-serif font-bold text-2xl drop-shadow-md">{service.name}</h3>
                 </div>
               </div>
+
               <div className="p-6">
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5 min-h-[4.5rem]">
                   {service.description}
@@ -88,6 +96,7 @@ const Services: React.FC = () => {
             </div>
           ))}
         </div>
+
         {/* Training Section */}
         <div className="mt-24">
           <div className="text-center mb-12">
@@ -99,6 +108,7 @@ const Services: React.FC = () => {
               Take your passion to the next level with our certification programs.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {trainingPrograms.map((program, i) => (
               <div
@@ -120,4 +130,5 @@ const Services: React.FC = () => {
     </section>
   );
 };
+
 export default Services;

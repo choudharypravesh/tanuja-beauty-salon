@@ -1,8 +1,10 @@
 "use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, Heart, Gem, ArrowRight } from 'lucide-react';
+
 const AboutSalon: React.FC = () => {
   const pillars = [
     {
@@ -24,6 +26,7 @@ const AboutSalon: React.FC = () => {
       color: 'from-gold-400 to-gold-600',
     },
   ];
+
   return (
     <section
       id="about-salon-summary"
@@ -34,6 +37,7 @@ const AboutSalon: React.FC = () => {
         <div className="absolute top-20 left-10 w-72 h-72 bg-rose-100/60 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-plum-100/60 rounded-full blur-3xl" />
       </div>
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image collage */}
@@ -74,12 +78,14 @@ const AboutSalon: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-plum-900/30 to-transparent" />
               </div>
             </div>
+
             {/* Floating badge */}
             <div className="absolute -bottom-4 -right-2 md:-right-6 bg-gradient-radiant text-white rounded-2xl px-5 py-4 shadow-glow-plum rotate-[-3deg] animate-float">
               <div className="font-serif text-2xl font-bold leading-none">15+</div>
               <div className="text-xs uppercase tracking-widest mt-1">Years of Passion</div>
             </div>
           </div>
+
           {/* Content */}
           <div className="text-center lg:text-left">
             <span className="inline-block text-xs md:text-sm font-semibold tracking-[0.3em] uppercase text-rose-600 mb-4">
@@ -89,6 +95,7 @@ const AboutSalon: React.FC = () => {
               A Sanctuary Where{' '}
               <span className="text-gradient-rose">Beauty is Celebrated</span>
             </h2>
+
             <p className="text-gray-600 text-base md:text-lg mb-5 leading-relaxed">
               Step into Tanu&apos;s Salon Dé Beauté, a haven where beauty is not
               just enhanced but celebrated. With over <strong className="text-rose-700">15 years of expertise</strong>,
@@ -98,6 +105,7 @@ const AboutSalon: React.FC = () => {
               From the moment you enter, an inviting ambiance soothes and uplifts,
               blending modern elegance with calming touches for your privacy and comfort.
             </p>
+
             {/* Pillars */}
             <div className="grid sm:grid-cols-3 gap-4 mb-10">
               {pillars.map((p, i) => (
@@ -116,6 +124,7 @@ const AboutSalon: React.FC = () => {
                 </div>
               ))}
             </div>
+
             <Link href="/about" className="btn-primary">
               <span>Learn More About Us</span>
               <ArrowRight size={18} />

@@ -1,14 +1,18 @@
 "use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Facebook, Instagram, Mail, Phone, MapPin, Heart } from 'lucide-react';
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
+
   const quickLinks = ['Home', 'About', 'Services', 'Gallery', 'Testimonials', 'Contact'];
   const servicesList = [
     'Bridal Services',
@@ -18,6 +22,7 @@ const Footer: React.FC = () => {
     'Threading & Waxing',
     'Beauty Training',
   ];
+
   return (
     <footer className="relative overflow-hidden bg-gradient-to-br from-[#1a0510] via-[#2b0a20] to-[#1a0510] text-white">
       {/* Decorative blobs */}
@@ -25,8 +30,10 @@ const Footer: React.FC = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-rose-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-plum-500/10 rounded-full blur-3xl" />
       </div>
+
       {/* Top gradient border */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-rose-400/60 to-transparent" />
+
       <div className="container mx-auto px-4 md:px-6 pt-16 pb-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
@@ -75,6 +82,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
+
           {/* Quick Links */}
           <div>
             <h4 className="font-serif font-bold text-lg mb-5 text-rose-50">Quick Links</h4>
@@ -110,6 +118,7 @@ const Footer: React.FC = () => {
               })}
             </ul>
           </div>
+
           {/* Services */}
           <div>
             <h4 className="font-serif font-bold text-lg mb-5 text-rose-50">Our Services</h4>
@@ -131,6 +140,7 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
+
           {/* Contact */}
           <div>
             <h4 className="font-serif font-bold text-lg mb-5 text-rose-50">Get In Touch</h4>
@@ -156,6 +166,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-rose-100/60">
           <p>© {currentYear} Tanu&apos;s Salon Dé Beauté. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
@@ -166,4 +177,5 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
+
 export default Footer;

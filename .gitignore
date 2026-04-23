@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .env
 .next
+
+# Local patch exports
+*.patch

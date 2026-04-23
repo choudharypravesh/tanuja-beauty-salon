@@ -35,6 +35,7 @@ const AboutPage: React.FC = () => {
             </svg>
           </div>
         </section>
+
         <section id="about-salon-detailed" className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
