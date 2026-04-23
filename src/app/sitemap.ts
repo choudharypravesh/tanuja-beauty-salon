@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://tanussalondebeaute.com';
+const BASE_URL = 'https://tanusalon.netlify.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

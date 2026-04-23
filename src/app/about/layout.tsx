@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const BASE_URL = 'https://tanussalondebeaute.com';
+const BASE_URL = 'https://tanusalon.netlify.app';
 
 export const metadata: Metadata = {
   title: "About Us – Beauty Parlour in Bag Mugaliya, Bhopal | Tanu's Salon Dé Beauté",

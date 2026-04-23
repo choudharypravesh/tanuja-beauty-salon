@@ -22,7 +22,9 @@ const cinzel = Cinzel({
   display: 'swap',
 });
 
-const BASE_URL = 'https://tanussalondebeaute.com';
+const BASE_URL = 'https://tanusalon.netlify.app';
+const INSTAGRAM_URL = 'https://www.instagram.com/makeup_artist_tanu_/';
+const FACEBOOK_URL = 'https://www.facebook.com/tanusalon';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -175,9 +177,38 @@ export default function RootLayout({
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Grooming Package" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beauty Training Course" } }
     ],
+    "founder": {
+      "@type": "Person",
+      "name": "Tanu",
+      "jobTitle": "Head Beautician and Bridal Makeup Artist",
+      "description": "Expert beautician and makeup artist with 15+ years of experience in Bhopal. Founder and lead artist at Tanu's Salon Dé Beauté.",
+      "worksFor": {
+        "@type": "BeautySalon",
+        "name": "Tanu's Salon Dé Beauté"
+      },
+      "image": `${BASE_URL}/images/indian_women_going_through_bridal_makeup.jpeg`,
+      "url": BASE_URL,
+      "sameAs": [
+        INSTAGRAM_URL,
+        FACEBOOK_URL
+      ]
+    },
+    "knowsAbout": [
+      "Bridal Makeup",
+      "HD Makeup",
+      "Airbrush Makeup",
+      "Hair Styling",
+      "Facial Treatments",
+      "Skin Care",
+      "Waxing",
+      "Threading",
+      "Mehndi and Henna Art",
+      "Pre-Bridal Packages",
+      "Beauty Training"
+    ],
     "sameAs": [
-      "https://www.facebook.com/tanusalon",
-      "https://www.instagram.com/makeup_artist_tanu_/"
+      FACEBOOK_URL,
+      INSTAGRAM_URL
     ]
   };
 
